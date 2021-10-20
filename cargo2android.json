@@ -6,6 +6,5 @@
   "dependencies": true,
   "device": true,
   "features": "deflate-zlib",
-  "run": true,
-  "tests": true
+  "run": true
 }
