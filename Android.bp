@@ -22,6 +22,8 @@ rust_library {
     name: "libzip",
     host_supported: true,
     crate_name: "zip",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.5.13",
     srcs: ["src/lib.rs"],
     edition: "2018",
     features: [
@@ -40,18 +42,138 @@ rust_library {
     ],
 }
 
-// dependent_library ["feature_list"]
-//   byteorder-1.4.3 "default,std"
-//   cc-1.0.68
-//   cfg-if-1.0.0
-//   crc32fast-1.2.1 "default,std"
-//   flate2-1.0.20 "any_zlib,libz-sys,zlib"
-//   libc-0.2.97 "default,std"
-//   libz-sys-1.1.3
-//   pkg-config-0.3.19
-//   proc-macro2-1.0.27 "default,proc-macro"
-//   quote-1.0.9 "default,proc-macro"
-//   syn-1.0.73 "clone-impls,default,derive,parsing,printing,proc-macro,quote"
-//   thiserror-1.0.25
-//   thiserror-impl-1.0.25
-//   unicode-xid-0.2.2 "default"
+rust_defaults {
+    name: "zip_test_defaults",
+    crate_name: "zip",
+    srcs: ["src/lib.rs"],
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.5.13",
+    test_suites: ["general-tests"],
+    auto_gen_config: true,
+    edition: "2018",
+    features: [
+        "deflate-zlib",
+        "flate2",
+    ],
+    rustlibs: [
+        "libbencher",
+        "libbyteorder",
+        "libcrc32fast",
+        "libflate2",
+        "librand",
+        "libthiserror",
+        "libwalkdir",
+    ],
+}
+
+rust_test_host {
+    name: "zip_host_test_src_lib",
+    defaults: ["zip_test_defaults"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "zip_device_test_src_lib",
+    defaults: ["zip_test_defaults"],
+}
+
+rust_defaults {
+    name: "zip_test_defaults_zip",
+    crate_name: "zip",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.5.13",
+    test_suites: ["general-tests"],
+    auto_gen_config: true,
+    edition: "2018",
+    features: [
+        "deflate-zlib",
+        "flate2",
+    ],
+    rustlibs: [
+        "libbencher",
+        "libbyteorder",
+        "libcrc32fast",
+        "libflate2",
+        "librand",
+        "libthiserror",
+        "libwalkdir",
+        "libzip",
+    ],
+}
+
+rust_test_host {
+    name: "zip_host_test_tests_end_to_end",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/end_to_end.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "zip_device_test_tests_end_to_end",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/end_to_end.rs"],
+}
+
+rust_test_host {
+    name: "zip_host_test_tests_invalid_date",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/invalid_date.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "zip_device_test_tests_invalid_date",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/invalid_date.rs"],
+}
+
+rust_test_host {
+    name: "zip_host_test_tests_zip64_large",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/zip64_large.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "zip_device_test_tests_zip64_large",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/zip64_large.rs"],
+}
+
+rust_test_host {
+    name: "zip_host_test_tests_zip_comment_garbage",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/zip_comment_garbage.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "zip_device_test_tests_zip_comment_garbage",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/zip_comment_garbage.rs"],
+}
+
+rust_test_host {
+    name: "zip_host_test_tests_zip_crypto",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/zip_crypto.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "zip_device_test_tests_zip_crypto",
+    defaults: ["zip_test_defaults_zip"],
+    srcs: ["tests/zip_crypto.rs"],
+}
