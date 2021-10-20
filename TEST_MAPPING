@@ -2,28 +2,19 @@
 {
   "presubmit": [
     {
+      "name": "ZipFuseTest"
+    },
+    {
       "name": "libapkverify.integration_test"
     },
     {
       "name": "libapkverify.test"
     },
     {
-      "name": "zip_device_test_src_lib"
+      "name": "microdroid_manager_test"
     },
     {
-      "name": "zip_device_test_tests_end_to_end"
-    },
-    {
-      "name": "zip_device_test_tests_invalid_date"
-    },
-    {
-      "name": "zip_device_test_tests_zip64_large"
-    },
-    {
-      "name": "zip_device_test_tests_zip_comment_garbage"
-    },
-    {
-      "name": "zip_device_test_tests_zip_crypto"
+      "name": "virtualizationservice_device_test"
     }
   ]
 }
