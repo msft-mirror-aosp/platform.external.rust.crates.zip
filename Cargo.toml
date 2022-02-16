@@ -13,7 +13,7 @@
 [package]
 edition = "2018"
 name = "zip"
-version = "0.5.13"
+version = "0.5.11"
 authors = ["Mathijs van de Nes <git@mathijs.vd-nes.nl>", "Marli Frost <marli@frost.red>", "Ryan Levick <ryan.levick@gmail.com>"]
 description = "Library to support the reading and writing of zip files.\n"
 keywords = ["zip", "archive"]
@@ -27,14 +27,14 @@ harness = false
 version = "1.3"
 
 [dependencies.bzip2]
-version = "0.4"
+version = "0.3"
 optional = true
 
 [dependencies.crc32fast]
 version = "1.0"
 
 [dependencies.flate2]
-version = "1.0.0"
+version = ">=1.0.0, <=1.0.14"
 optional = true
 default-features = false
 
@@ -58,4 +58,3 @@ default = ["bzip2", "deflate", "time"]
 deflate = ["flate2/rust_backend"]
 deflate-miniz = ["flate2/default"]
 deflate-zlib = ["flate2/zlib"]
-unreserved = []
