@@ -4,7 +4,7 @@ zip-rs
 [![Build Status](https://img.shields.io/github/workflow/status/zip-rs/zip/CI)](https://github.com/zip-rs/zip/actions?query=branch%3Amaster+workflow%3ACI)
 [![Crates.io version](https://img.shields.io/crates/v/zip.svg)](https://crates.io/crates/zip)
 
-[Documentation](https://docs.rs/zip/0.5.13/zip/)
+[Documentation](https://docs.rs/zip/0.5.10/zip/)
 
 
 Info
@@ -51,7 +51,7 @@ All of these are enabled by default.
 MSRV
 ----
 
-Our current Minimum Supported Rust Version is **1.36.0**. When adding features,
+Our current Minimum Supported Rust Version is **1.34.0**. When adding features,
 we will follow these guidelines:
 
 - We will always support the latest four minor Rust versions. This gives you a 6
