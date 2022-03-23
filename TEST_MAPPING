@@ -3,35 +3,6 @@
   "presubmit": [
     {
       "name": "ZipFuseTest"
-    },
-    {
-      "name": "libapkverify.integration_test"
-    },
-    {
-      "name": "libapkverify.test"
-    },
-    {
-      "name": "microdroid_manager_test"
-    },
-    {
-      "name": "virtualizationservice_device_test"
-    }
-  ],
-  "presubmit-rust": [
-    {
-      "name": "ZipFuseTest"
-    },
-    {
-      "name": "libapkverify.integration_test"
-    },
-    {
-      "name": "libapkverify.test"
-    },
-    {
-      "name": "microdroid_manager_test"
-    },
-    {
-      "name": "virtualizationservice_device_test"
     }
   ]
 }
