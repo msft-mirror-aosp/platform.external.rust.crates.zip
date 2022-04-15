@@ -23,7 +23,7 @@ rust_library {
     host_supported: true,
     crate_name: "zip",
     cargo_env_compat: true,
-    cargo_pkg_version: "0.5.13",
+    cargo_pkg_version: "0.6.2",
     srcs: ["src/lib.rs"],
     edition: "2018",
     features: [
@@ -34,10 +34,14 @@ rust_library {
         "libbyteorder",
         "libcrc32fast",
         "libflate2",
-        "libthiserror",
     ],
     apex_available: [
         "//apex_available:platform",
         "com.android.virt",
     ],
+    arch: {
+        arm: {
+            rustlibs: ["libcrossbeam_utils"],
+        },
+    },
 }
