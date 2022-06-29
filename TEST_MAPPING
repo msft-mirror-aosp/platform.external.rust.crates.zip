@@ -5,10 +5,19 @@
       "name": "ZipFuseTest"
     },
     {
+      "name": "apkdmverity.test"
+    },
+    {
+      "name": "libapexutil_rust.test"
+    },
+    {
       "name": "libapkverify.integration_test"
     },
     {
       "name": "libapkverify.test"
+    },
+    {
+      "name": "libidsig.test"
     },
     {
       "name": "microdroid_manager_test"
@@ -22,10 +31,19 @@
       "name": "ZipFuseTest"
     },
     {
+      "name": "apkdmverity.test"
+    },
+    {
+      "name": "libapexutil_rust.test"
+    },
+    {
       "name": "libapkverify.integration_test"
     },
     {
       "name": "libapkverify.test"
+    },
+    {
+      "name": "libidsig.test"
     },
     {
       "name": "microdroid_manager_test"
