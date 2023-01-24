@@ -8,6 +8,12 @@
       "name": "apkdmverity.test"
     },
     {
+      "name": "avmdtool.test"
+    },
+    {
+      "name": "avmdtool_tests"
+    },
+    {
       "name": "libapexutil_rust.test"
     },
     {
@@ -17,13 +23,16 @@
       "name": "libapkverify.test"
     },
     {
-      "name": "libidsig.test"
+      "name": "libpvmfw_avb.integration_test"
     },
     {
       "name": "microdroid_manager_test"
     },
     {
-      "name": "virtualizationservice_device_test"
+      "name": "virtualizationmanager_device_test"
+    },
+    {
+      "name": "vm.test"
     }
   ],
   "presubmit-rust": [
@@ -34,6 +43,12 @@
       "name": "apkdmverity.test"
     },
     {
+      "name": "avmdtool.test"
+    },
+    {
+      "name": "avmdtool_tests"
+    },
+    {
       "name": "libapexutil_rust.test"
     },
     {
@@ -43,13 +58,16 @@
       "name": "libapkverify.test"
     },
     {
-      "name": "libidsig.test"
+      "name": "libpvmfw_avb.integration_test"
     },
     {
       "name": "microdroid_manager_test"
     },
     {
-      "name": "virtualizationservice_device_test"
+      "name": "virtualizationmanager_device_test"
+    },
+    {
+      "name": "vm.test"
     }
   ]
 }
