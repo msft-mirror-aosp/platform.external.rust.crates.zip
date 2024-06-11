@@ -1,8 +1,13 @@
 diff --git a/Android.bp b/Android.bp
-index 2373253..c0b2349 100644
+index be44509..ccac5a9 100644
 --- a/Android.bp
 +++ b/Android.bp
-@@ -39,6 +39,11 @@ rust_library {
+@@ -36,11 +36,16 @@ rust_library {
+         "libbyteorder",
+         "libcrc32fast",
+         "libflate2",
+     ],
+     apex_available: [
          "//apex_available:platform",
          "com.android.virt",
      ],
